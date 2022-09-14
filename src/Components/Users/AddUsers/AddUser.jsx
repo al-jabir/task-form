@@ -1,6 +1,7 @@
 import React, { useState } from "react";
+import Button from "../../UI/Buttons/Button";
 import Card from "../../UI/Cards/Card";
-
+import classes from "./AddUser.module.css";
 const AddUser = () => {
   const [userName, setUserName] = useState("");
   const [userAge, setUserAge] = useState("");
@@ -20,13 +21,13 @@ const AddUser = () => {
   };
   return (
     <div>
-      <Card>
+      <Card className={classes.main}>
         <form onSubmit={onUserHandl}>
-          <label htmlFor="username">Username</label>
+          <label htmlFor="user">Username</label>
           <input type="text" value={userName} onChange={userNameHandler} />
           <label htmlFor="age">Age (Years)</label>
           <input type="number" value={userAge} onChange={userAgeHangler} />
-          <button type="submit">Add User</button>
+          <Button type="submit">Add User</Button>
         </form>
       </Card>
     </div>

@@ -1,0 +1,17 @@
+.main {
+  width: 70%;
+  margin: 2rem auto;
+  padding: 9px;
+  border-radius: 5px;
+}
+.main label {
+  font-size: 15px;
+  font-weight: bold;
+  /* padding-right: 5px; */
+  display: flex;
+}
+.main input {
+  width: 100%;
+  display: block;
+  outline: none;
+}
