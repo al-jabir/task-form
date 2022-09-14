@@ -1,27 +1,19 @@
 import React from "react";
+import Card from "../../UI/Cards/Card";
+import classes from "./UserList.module.css";
 
 const UserList = ({ items }) => {
   //   console.log(items);
   return (
-    <div
-      style={{
-        border: "solid 1px tomato",
-        padding: "10px",
-        width: "50%",
-        margin: "0 auto",
-      }}
-    >
+    <Card className={classes.users}>
       <ul>
-        {items.map((item, inx) => {
-          const { name, age } = item;
-          return (
-            <li key={inx}>
-              {name} {age} Years old
-            </li>
-          );
-        })}
+        {items.map((user, id) => (
+          <li key={id}>
+            {user.name} ({user.age} years old)
+          </li>
+        ))}
       </ul>
-    </div>
+    </Card>
   );
 };
 
