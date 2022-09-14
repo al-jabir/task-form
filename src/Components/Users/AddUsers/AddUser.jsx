@@ -5,8 +5,15 @@ const AddUser = () => {
   const [userName, setUserName] = useState("");
   const [userAge, setUserAge] = useState("");
 
+  const onUserHandl = (e) => {
+    e.preventDefault();
+    if (userName.trim().length === 0 || userAge.trim().length === 0) {
+      return;
+    }
+  };
+
   const userAgeHangler = (e) => {
-    setUserAge(e.target.vale);
+    setUserAge(e.target.value);
   };
   const userNameHandler = (e) => {
     setUserName(e.target.value);
@@ -14,7 +21,7 @@ const AddUser = () => {
   return (
     <div>
       <Card>
-        <form>
+        <form onSubmit={onUserHandl}>
           <label htmlFor="username">Username</label>
           <input type="text" value={userName} onChange={userNameHandler} />
           <label htmlFor="age">Age</label>
