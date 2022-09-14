@@ -9,7 +9,7 @@ const UserList = ({ items }) => {
       <ul>
         {items.map((user, id) => (
           <li key={id}>
-            {user.name} ({user.age} years old)
+            {user.name} {user.age} years old
           </li>
         ))}
       </ul>
