@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./AddUser.module.css";
+import classes from "./AddUser.module.css";
 const AddUser = () => {
   const [userName, setUserName] = useState("");
   const [userAge, setUserAge] = useState("");
@@ -28,7 +28,7 @@ const AddUser = () => {
 
   return (
     <div>
-      <form className="main" onSubmit={onUserHandle}>
+      <form className={classes.main} onSubmit={onUserHandle}>
         <label htmlFor="username">UserName</label>
         <input type="username" value={userName} onChange={userNameHandle} />
         <label htmlFor="username">Age (Years)</label>
