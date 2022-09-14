@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Button from "../../UI/Buttons/Button";
+import ErrorModal from "../../UI/ErrorsModal/ErrorModal";
 import classes from "./AddUser.module.css";
 const AddUser = ({ onAddUserHandle }) => {
   const [userName, setUserName] = useState("");
@@ -31,6 +32,7 @@ const AddUser = ({ onAddUserHandle }) => {
 
   return (
     <div>
+      <ErrorModal title="Never went wrong " message="error" />
       <form className={classes.main} onSubmit={onUserHandle}>
         <label htmlFor="username">UserName</label>
         <input type="username" value={userName} onChange={userNameHandle} />
