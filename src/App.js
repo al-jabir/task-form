@@ -14,7 +14,7 @@ const App = () => {
   return (
     <>
       <AddUser onAddUserHandle={itemListHandle} />
-      <UserList item={userList} />
+      <UserList items={userList} />
     </>
   );
 };
