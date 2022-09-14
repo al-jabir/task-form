@@ -24,3 +24,7 @@
   outline: none;
   border-color: #be2cdb;
 }
+.main button {
+  margin-top: 15px;
+  margin-left: 350px;
+}
