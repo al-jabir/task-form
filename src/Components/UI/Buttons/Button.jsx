@@ -1,9 +1,13 @@
 import React from "react";
-
+import classes from "./Button.module.css";
 const Button = ({ type, children }) => {
-  console.log("dine");
+  console.log(children);
   return (
-    <button className={type || "button"} onClick={onclick}>
+    <button
+      className={classes.button}
+      type={type || "button"}
+      onClick={onclick}
+    >
       {children}
     </button>
   );

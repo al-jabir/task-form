@@ -15,6 +15,7 @@ const AddUser = () => {
 
   const userAgeHangler = (e) => {
     setUserAge(e.target.value);
+    console.log(userName, userAge);
   };
   const userNameHandler = (e) => {
     setUserName(e.target.value);
