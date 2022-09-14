@@ -24,7 +24,7 @@ const AddUser = () => {
         <form onSubmit={onUserHandl}>
           <label htmlFor="username">Username</label>
           <input type="text" value={userName} onChange={userNameHandler} />
-          <label htmlFor="age">Age</label>
+          <label htmlFor="age">Age (Years)</label>
           <input type="number" value={userAge} onChange={userAgeHangler} />
           <button type="submit">Add User</button>
         </form>
