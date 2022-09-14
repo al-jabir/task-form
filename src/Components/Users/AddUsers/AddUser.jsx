@@ -1,6 +1,7 @@
 import React, { useState } from "react";
+import Button from "../../UI/Buttons/Button";
 import classes from "./AddUser.module.css";
-const AddUser = () => {
+const AddUser = (props) => {
   const [userName, setUserName] = useState("");
   const [userAge, setUserAge] = useState("");
 
@@ -33,7 +34,7 @@ const AddUser = () => {
         <input type="username" value={userName} onChange={userNameHandle} />
         <label htmlFor="username">Age (Years)</label>
         <input type="number" value={userAge} onChange={userAgeHandle} />
-        <button type="submit">Add</button>
+        <Button type="submit">Add</Button>
       </form>
     </div>
   );
