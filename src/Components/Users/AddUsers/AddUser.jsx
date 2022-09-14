@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import Button from "../../UI/Buttons/Button";
 import classes from "./AddUser.module.css";
-const AddUser = (props) => {
+const AddUser = ({ onAddUserHandle }) => {
   const [userName, setUserName] = useState("");
   const [userAge, setUserAge] = useState("");
+  const [error, setError] = useState();
 
   const onUserHandle = (e) => {
     e.preventDefault();
@@ -15,6 +16,7 @@ const AddUser = (props) => {
       return;
     }
     console.log(userName, userAge);
+    onAddUserHandle(userName, userAge);
     setUserName("");
     setUserAge("");
   };
